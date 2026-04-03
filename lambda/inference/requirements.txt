@@ -1,0 +1,4 @@
+
+nnxruntime
+opencv-python-headless
+numpy
