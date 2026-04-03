@@ -5,6 +5,8 @@ resource "aws_apigatewayv2_api" "main" {
   name          = "${var.project_name}-api-${var.environment}"
   protocol_type = "HTTP"
 
+  # OPTIONSはプリフライトリクエストというOPTIONSリクエストを自動で送るためのもの
+  # max_ageはプリフライトの結果をキャッシュする時間(s)
   cors_configuration {
     allow_headers = ["Content-Type"]
     allow_methods = ["POST", "GET", "OPTIONS"]
