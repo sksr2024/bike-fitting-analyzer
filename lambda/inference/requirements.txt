@@ -1,4 +1,4 @@
-
-nnxruntime
+onnxruntime
 opencv-python-headless
 numpy
+boto3

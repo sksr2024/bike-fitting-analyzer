@@ -7,9 +7,8 @@ resource "aws_lambda_function" "inference" {
   package_type  = "Image"
   image_uri     = "${aws_ecr_repository.inference.repository_url}:latest"
 
-  memory_size                    = 1024 # ONNX Runtimeの推論に必要
-  timeout                        = 30
-  reserved_concurrent_executions = 2
+  memory_size = 1024 # ONNX Runtimeの推論に必要
+  timeout     = 30
 
   environment {
     variables = {
@@ -43,9 +42,8 @@ resource "aws_lambda_function" "api" {
   filename         = data.archive_file.api_lambda.output_path
   source_code_hash = data.archive_file.api_lambda.output_base64sha256
 
-  memory_size                    = 256
-  timeout                        = 30
-  reserved_concurrent_executions = 2
+  memory_size = 256
+  timeout     = 30
 
   environment {
     variables = {
