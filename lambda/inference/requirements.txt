@@ -1,4 +1,3 @@
-
-nnxruntime
+onnxruntime
 opencv-python-headless
 numpy

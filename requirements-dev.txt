@@ -1,0 +1,7 @@
+pytest
+pytest-cov
+mypy
+flake8
+opencv-python-headless
+numpy
+boto3
